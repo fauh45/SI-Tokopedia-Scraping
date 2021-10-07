@@ -1,0 +1,8 @@
+# Do not commit any of the drivers
+*.exe
+
+# Scrapping result
+*.json
+
+# Python env
+.env
