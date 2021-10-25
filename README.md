@@ -2,8 +2,6 @@
 
 The code used in this repository are used for Information System class in Bandung State Polytechnics CS 2021.
 
-ALL INTENDED PURPOSES OF THE CODE ARE EDUCATIONAL, IN NO WAY THE AUTHOR OF THE CODE (INCLUDING THE TEAM, LECTURER, UNIVERSITY, ETC.) HAVE COMMERCIAL OR MALICIOUS INTENT FOR THE USE OF THE CODE. WE HOLD NO RESPONSIBILITY FOR THE USE OF THE USE OF THE CODE FOR ANY INTENTION AND USES. THE AUTHOR HOLDS NO WARRANTY FOR THE CONSEQUENCES OF THE USE OF THE CODE.
-
 ## Usage
 
 1. Create a new python environment
@@ -18,6 +16,14 @@ ALL INTENDED PURPOSES OF THE CODE ARE EDUCATIONAL, IN NO WAY THE AUTHOR OF THE C
 
 2. Get Stable MS-Edge driver from the [official website](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) and unpack it into `./drivers`
 3. Run the code using `python main.py`
+
+### GQL Scraping
+
+This script is using the graphql API of Tokopedia to get data much faster, and way more detailed. To use it follows the first step from above, and call the function `python gql_scraping.py`.
+
+### Sentiment Script
+
+To use the sentiment script follows the first step above, and then call the function `python sentiment.py "Text to do sentiment analysis with"`. Note that the text to do sentiment analysis with are set for Indonesian languages.
 
 ## License
 
