@@ -23,7 +23,11 @@ This script is using the graphql API of Tokopedia to get data much faster, and w
 
 ### Sentiment Script
 
-To use the sentiment script follows the first step above, and then call the function `python sentiment.py "Text to do sentiment analysis with"`. Note that the text to do sentiment analysis with are set for Indonesian languages.
+To use the sentiment script follows the first step above, and then call the function `python sentiment.py` to start the server.
+
+To call the the API, send POST data with the pattern of `{ "text": "the theing sentiment that's going to be analyzed" }` and the result will be `{ "polarity": 0 }`
+
+Note that the text to do sentiment analysis with are set for Indonesian languages.
 
 ## License
 

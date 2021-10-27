@@ -1,17 +1,20 @@
+from flask.json import jsonify
 from textblob import TextBlob
-import sys
+from flask import Flask
+from flask import request
 import json
 
-try:
-    target_text = sys.argv[1]
+app = Flask(__name__)
 
-    analysis = TextBlob(target_text)
+
+@app.route("/", methods=["POST"])
+def sentiment():
+    body = request.get_json()
+    analysis = TextBlob(body["text"])
     an = analysis.translate(from_lang='id', to='en')
-    print(json.dumps(an.sentiment.polarity))
 
-except IndexError:
-    print("Error: Text arguments not found", file=sys.stderr)
-    print(0)
-except Exception as err:
-    print("System error: " + str(err), file=sys.stderr)
-    print(0)
+    return jsonify(json.dumps({"polarity": an.sentiment.polarity}))
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=True)
